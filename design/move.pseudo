@@ -7,19 +7,51 @@
 # Write pseudocode, not Python code. Use clear indentation and course-appropriate
 # keywords such as INPUT, OUTPUT, IF, ELSE, WHILE, SET, or similar terms.
 
-# TODO 1: Identify the information the movement process needs.
-# Consider the player's current room and movement command.
+SET current_room TO "Castle Courtyard"
+SET inventory TO an empty list
+SET game_over TO FALSE
+STORE the room connections shown in game_map.drawio
 
-# TODO 2: Prompt for and receive the player's movement command.
+WHILE game_over IS FALSE
+    OUTPUT "Current room: " + current_room
+    OUTPUT inventory
+    OUTPUT "Enter go north, go south, go east, go west, or get item name:"
+    INPUT command
+    REMOVE leading and trailing spaces from command
+    CONVERT command TO lowercase
 
-# TODO 3: Validate whether the requested movement is possible from the
-# current room. Show the decision clearly.
+  IF command begins with "go "
+    SET direction TO the text after "go "
+      IF direction IS north, south, east, or west
+          IF current_room has an exit in direction
+              SET current_room TO the room connected in direction
+              OUTPUT "You entered " + current_room
 
-# TODO 4: Describe what happens when the movement command is valid.
-# Include the room update and player output.
+              IF current_room IS "Great Hall"
+                  IF inventory contains all six required items
+                      OUTPUT "Your oath is fulfilled. Renaud falls, and the Holy Scepter is reclaimed!"
+                  ELSE
+                      OUTPUT "You entered unprepared. Renaud defeats you, and the Holy Scepter remains lost."
+                  END IF
 
-# TODO 5: Describe what happens when the movement command is invalid.
-# Include the output the player should receive.
+                  SET game_over TO TRUE
+              END IF
+          ELSE
+              OUTPUT "You cannot go that way."
+          END IF
+      ELSE
+          OUTPUT "Invalid direction. Use north, south, east, or west."
+      END IF
 
-# TODO 6: Show how movement fits into repeated gameplay.
-# The final game continues accepting commands until a required ending occurs.
+    ELSE IF command begins with "get "
+        SET requested_item TO the text after "get "
+        CALL the get-item process described in get_item.pseudo
+        PASS requested_item, current_room, and inventory
+        SET inventory TO the returned inventory
+
+    ELSE
+        OUTPUT "Invalid command. Use go direction or get item name."
+    END IF
+END WHILE
+
+END
