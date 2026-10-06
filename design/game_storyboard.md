@@ -4,28 +4,29 @@
 > Project One deliverable and later becomes a reference for Project Two.
 
 ## Theme and Storyline
+The Sword of the Holy Scepter is a medieval adventure set during the First Crusade. Its theme centers on faith, loyalty, and a crusader knight's mission to reclaim a stolen sacred relic.
 
-**Theme:**
 
-TODO: Name and briefly describe your game's theme.
+
 
 **Storyline:**
 
-TODO: In one short paragraph, explain the setting, the player's goal, the items
-the player must gather, and the threat created by the villain.
+The player takes the role of Sir Roland Godfrey de Varenne, a crusader knight sent to recover the Holy Scepter from the traitorous Lord Renaud de Veyrac. The adventure takes place inside Renaud's fortified castle, beginning in the Castle Courtyard with an empty inventory. Roland must explore the castle and collect a Sword, Shield, Cross Pendant, Food Supplies, Castle Map, and Royal Key before confronting Renaud in the Great Hall. Entering the Great Hall with all six items allows Roland to defeat Renaud and reclaim the Holy Scepter. Entering before collecting every item results in defeat.
+
+
 
 ## Rooms
 
 Project One requires a minimum of eight rooms.
 
-1. TODO: Start room
-2. TODO: Room
-3. TODO: Room
-4. TODO: Room
-5. TODO: Room
-6. TODO: Room
-7. TODO: Room
-8. TODO: Villain room
+1. Castle Courtyard - starting room; no item
+2. Guardhouse - Shield
+3. Armory - Sword
+4. Chapel - Cross Pendant
+5. Library - Castle Map
+6. Storeroom - Food Supplies
+7. Treasury - Royal Key
+8. Great Hall - Lord Renaud de Veyrac; no item
 
 Add more rooms if your design needs them.
 
@@ -34,19 +35,19 @@ Add more rooms if your design needs them.
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Item
-2. TODO: Item
-3. TODO: Item
-4. TODO: Item
-5. TODO: Item
-6. TODO: Item
+1. Sword - Armory
+2. Shield - Guardhouse
+3. Cross Pendant - Chapel
+4. Food Supplies - Storeroom
+5. Castle Map - Library
+6. Royal Key - Treasury
 
 If you add rooms beyond the minimum, add an item for every additional room
 except the start room and villain room.
 
 ## Villain
 
-TODO: Identify and briefly describe the villain.
+Lord Renaud de Veyrac is a fictional nobleman and traitorous knight who betrayed his oath and stole the Holy Scepter for his own power. He waits in the Great Hall and defeats Roland if the player enters before collecting all six required items. 
 
 ## Storyboard and Map Check
 
